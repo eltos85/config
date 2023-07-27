@@ -1,0 +1,60 @@
+# Заполняется все по категориям:
+#   lending_page - все страницы которые относятся к лендингу
+#   main_site_pages - все страницы отоносящиеся к нашему сайту
+#   sport_cybersport - спорт и кибер спорт
+#   registration - страницы на которых появляется форма регистрации
+#   games - страницы игр.
+
+# Структура YAML заполнения: в каждой категории есть объекты тестирования, их можно создавать сколько угодно
+# У каждого объекта есть свойства
+# Например в games есть объект aviator у него есть свойства url и config
+# Если вам надо создать или удалить любой объект, просто удалите его из категории или создайте новый
+# по аналогии с объектами в категории
+# Например вам надо добавить в категорию lending_page новую страницу лендинга:
+#     palge_name: имя страницы , вместо пробелов _
+#       url: 'https://URL.rb' это линк на страницу
+
+# Как это работает:
+#  Скрипт берет этот конфиг, пробегает по категориям, собирает объекты и распределяет на тесты.
+#  Тесты будут делиться по категориям
+#  Количество тестов на категорию зависит от количества объектов
+
+lending_page:
+  wheel:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=91'
+  sport_bonus:
+    url: 'https://click.betboom.com/HVP54gg0?landing=333'
+  casino_bonus:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=89'
+
+main_site_pages:
+  base_page:
+    url: 'https://click.betboom.com/HVP54gg0'
+  casino_page:
+    url: 'https://click.betboom.com/H6CMDEaM'
+
+sport_cybersport:
+  sport:
+    url: 'https://click.betboom.com/HVP54gg0?landing=331'
+  cyber:
+    url: 'https://click.betboom.com/HVP54gg0?landing=332'
+
+registration:
+  sport:
+    url: 'https://click.betboom.com/HVP54gg0?landing=334'
+  casino:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=88'
+
+games:
+  aviator:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=90'
+    config: {'gameId': 7405, 'providerName': 'Spribe'}
+  plinco:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=92'
+    config: {'gameId': 7415, 'providerName': 'Spribe'}
+  plinco2:
+    url: 'https://click.betboom.com/H6CMDEaM?landing=93'
+    config: {'gameId': 17500, 'providerName': 'OneXTwoNetwork'}
+
+
+
